@@ -9,13 +9,13 @@ export const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          {/* Larger Image container */}
-          <div className="flex justify-center opacity-0 animate-fade-in mb-8">
-            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl">
+
+          <div className="flex justify-center opacity-0 animate-fade-in">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
               <img 
                 src={profileImage} 
                 alt="Hairunisha Asraf Ali"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
