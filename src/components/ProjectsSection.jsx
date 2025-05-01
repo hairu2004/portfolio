@@ -3,30 +3,30 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "Travel Planner",
+    description: " Developed a MERN stack travel planner web app for itinerary creation, budget management, and expense tracking. Features include user authentication, interactive UI, and real-time updates for a seamless experience.",
+    image: "/projects/Screenshot 2025-05-01 123325.png",
+    tags: ["MongoDB","ExpressJS","NodeJS","ReactJS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/hairu2004/Travel_planner-fullstack-",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Future Expense Predictor",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Smart Personal Expense Tracker is a Streamlit-based web app that uses machine learning to predict future spending,helping users manage finances efficiently.",
+    image: "/projects/Screenshot 2025-05-01 124238.png",
+    tags: ["Machine Learning","Linear Regression","Streamlit"],
+    demoUrl: "https://future-spending-predictor-9gzk4qe8b5fm4tn5g3b2uz.streamlit.app/",
+    githubUrl: "https://github.com/hairu2004/future-spending-predictor",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Face Mask Detection",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      " Developed a real-time face mask detection system using CNNs, TensorFlow, Keras and OpenCV.  The model was integrated with a webcam interface for real-time detection",
+    image: "/projects/images.jpeg",
+    tags: ["openCV","TensorFlow","CNN"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -42,7 +42,7 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
+        Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance, and user experience.
         </p>
 
@@ -100,7 +100,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/hairu2004"
           >
             Check My Github <ArrowRight size={16} />
           </a>
