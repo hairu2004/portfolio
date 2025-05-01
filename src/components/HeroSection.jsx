@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import profileImage from "../assets/profile.jpg"; // Adjust the path according to your folder structure
 
 export const HeroSection = () => {
   return (
@@ -8,6 +9,17 @@ export const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
+          {/* Larger Image container */}
+          <div className="flex justify-center opacity-0 animate-fade-in mb-8">
+            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-xl">
+              <img 
+                src={profileImage} 
+                alt="Hairunisha Asraf Ali"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
@@ -20,8 +32,8 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-          Hi I am Hairunisha , an passionate Full Stack & AI Developer currently pursuing a B.Tech in Artificial Intelligence and Machine Learning at Kongu Engineering College.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+            Hi I am Hairunisha, a passionate Full Stack AI Developer currently pursuing B.Tech in Artificial Intelligence and Machine Learning at Kongu Engineering College.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

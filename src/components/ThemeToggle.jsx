@@ -3,16 +3,24 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Default to true for dark mode
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
+    if (storedTheme) {
+      // If theme is stored, use that
+      const darkMode = storedTheme === "dark";
+      setIsDarkMode(darkMode);
+      if (darkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+      // If no theme is stored, default to dark mode
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
     }
   }, []);
 
@@ -33,8 +41,10 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className={cn(
         "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outlin-hidden"
+        "focus:outline-none", // Fixed typo from "outlin-hidden" to "outline-none"
+        "hover:bg-gray-200 dark:hover:bg-gray-700" // Added hover effect for better UX
       )}
+      aria-label="Toggle dark mode"
     >
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
