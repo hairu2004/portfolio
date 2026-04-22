@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
@@ -7,7 +7,6 @@ const projects = [
     description: " Developed a MERN stack travel planner web app for itinerary creation, budget management, and expense tracking. Features include user authentication, interactive UI, and real-time updates for a seamless experience.",
     image: "/projects/Screenshot 2025-05-01 123325.png",
     tags: ["MongoDB","ExpressJS","NodeJS","ReactJS"],
-    demoUrl: "#",
     githubUrl: "https://github.com/hairu2004/Travel_planner-fullstack-",
   },
   {
@@ -17,7 +16,6 @@ const projects = [
       "Smart Personal Expense Tracker is a Streamlit-based web app that uses machine learning to predict future spending,helping users manage finances efficiently.",
     image: "/projects/Screenshot 2025-05-01 124238.png",
     tags: ["Machine Learning","Linear Regression","Streamlit"],
-    demoUrl: "https://future-spending-predictor-9gzk4qe8b5fm4tn5g3b2uz.streamlit.app/",
     githubUrl: "https://github.com/hairu2004/future-spending-predictor",
   },
   {
@@ -27,8 +25,7 @@ const projects = [
       " Developed a real-time face mask detection system using CNNs, TensorFlow, Keras and OpenCV.  The model was integrated with a webcam interface for real-time detection",
     image: "/projects/images.jpeg",
     tags: ["openCV","TensorFlow","CNN"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/hairu2004/Face_Mask_Detection",
   },
 ];
 
@@ -75,13 +72,6 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
